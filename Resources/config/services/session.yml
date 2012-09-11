@@ -1,0 +1,20 @@
+parameters:
+    evolution.session.storage.native.class:     TheodoEvolution\HttpFoundationBundle\Storage\NativeSessionStorage
+    evolution.session.storage.mock_file.class:  TheodoEvolution\HttpFoundationBundle\Storage\MockFileSessionStorage
+    evolution.session_listener.class:           TheodoEvolution\HttpFoundationBundle\Listener\SessionListener
+
+    #Bag managers
+    evolution.session.symfony10_bag_manager.class: TheodoEvolution\HttpFoundationBundle\Manager\Symfony10BagManager
+
+services:
+    evolution.session_listener:
+        class: %evolution.session_listener.class%
+        tags:
+            - { name: kernel.event_subscriber, event: kernel.request }
+        arguments:
+            - @evolution.session.bag_manager
+
+    evolution.session.bag_manager:
+        class: %evolution.session.bag_manager.class%
+        arguments:
+            - @service_container
