@@ -63,7 +63,6 @@ public function registerBundles()
     $bundles = array(
         //vendors, other bundles...
         new TheodoEvolution\HttpFoundationBundle\TheodoEvolutionHttpFoundationBundle(),
-        new TheodoEvolution\SecurityBundle\TheodoEvolutionSecurityBundle(),
     );
 }
 ```
