@@ -67,6 +67,14 @@ public function registerBundles()
 }
 ```
 
+* Require the configuration file:
+```yaml
+# app/config/config.yml
+imports:
+    - { resource: "@TheodoEvolutionHttpFoundationBundle/Resources/config/services/session.yml" }
+```
+* Choose a BagManager from existing ones or use TheodoEvolution\HttpFoundationBundle\Manager\BagManagerInterface to create a new one
+* Register the BagManager class as parameter named evolution.session.bag_manager.class in your configuration
 * That's all!
 
 ## HowTo
