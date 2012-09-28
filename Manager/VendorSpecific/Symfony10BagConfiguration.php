@@ -12,11 +12,11 @@ use TheodoEvolution\HttpFoundationBundle\Manager\BagManagerConfigurationInterfac
 class Symfony10BagConfiguration implements BagManagerConfigurationInterface
 {
     private $namespaces = array(
-        'last_request_namespace' => 'symfony/user/sfUser/lastRequest',
-        'auth_namespace'         => 'symfony/user/sfUser/authenticated',
-        'credential_namespace'   => 'symfony/user/sfUser/credentials',
-        'attribute_namespace'    => 'symfony/user/sfUser/attributes',
-        'culture_namespace'      => 'symfony/user/sfUser/culture',
+        BagManagerConfigurationInterface::LAST_REQUEST_NAMESPACE => 'symfony/user/sfUser/lastRequest',
+        BagManagerConfigurationInterface::AUTH_NAMESPACE         => 'symfony/user/sfUser/authenticated',
+        BagManagerConfigurationInterface::CREDENTIAL_NAMESPACE   => 'symfony/user/sfUser/credentials',
+        BagManagerConfigurationInterface::ATTRIBUTE_NAMESPACE    => 'symfony/user/sfUser/attributes',
+        BagManagerConfigurationInterface::CULTURE_NAMESPACE      => 'symfony/user/sfUser/culture',
     );
 
     /**
