@@ -77,6 +77,7 @@ imports:
 * Register the BagManager class as a parameter named evolution.session.bag_manager.class in your configuration
 * Register the BagManagerConfiguration class as a parameter named evolution.session.bag_manager_configuration.class
 * Define your session name in config.yml (framework:session:name) to reuse your legacy cookie name
+* Define your session path and other configuration variables if needed (best method - make a phpinfo() inside your legacy application to find the correct values)
 
 ## HowTo
 
