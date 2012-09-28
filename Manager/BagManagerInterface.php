@@ -5,7 +5,8 @@ namespace TheodoEvolution\HttpFoundationBundle\Manager;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
- * BagManagerInterface class.
+ * A BagManager handles registering legacy session values in Symfony2 session.
+ * This is being done mainly by creating and registering SessionBags.
  *
  * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
  */

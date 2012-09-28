@@ -17,4 +17,4 @@ services:
     evolution.session.bag_manager:
         class: %evolution.session.bag_manager.class%
         arguments:
-            - @service_container
+            - %evolution.session.bag_manager_configuration.class%class

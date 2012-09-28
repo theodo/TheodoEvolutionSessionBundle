@@ -74,7 +74,8 @@ imports:
     - { resource: "@TheodoEvolutionHttpFoundationBundle/Resources/config/services/session.yml" }
 ```
 * Choose a BagManager from existing ones or use TheodoEvolution\HttpFoundationBundle\Manager\BagManagerInterface to create a new one
-* Register the BagManager class as parameter named evolution.session.bag_manager.class in your configuration
+* Register the BagManager class as a parameter named evolution.session.bag_manager.class in your configuration
+* Register the BagManagerConfiguration class as a parameter named evolution.session.bag_manager_configuration.class
 * That's all!
 
 ## HowTo
