@@ -14,7 +14,10 @@ services:
         arguments:
             - @evolution.session.bag_manager
 
+    evolution.session.bag_manager_configuration:
+        class: %evolution.session.bag_manager_configuration.class%
+
     evolution.session.bag_manager:
         class: %evolution.session.bag_manager.class%
         arguments:
-            - %evolution.session.bag_manager_configuration.class%
+            - @evolution.session.bag_manager_configuration
