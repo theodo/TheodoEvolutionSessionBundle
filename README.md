@@ -45,15 +45,26 @@ $loader->registerNamespaces(array(
 
 ###With Symfony 2.1
 
-* **TODO**: use composer.
-* *Problem*: theodo-evolution is a private repository. Should we use Satis?
-* Doc:
-  * [Manage package repository with composer](http://getcomposer.org/doc/05-repositories.md#package-2)
-  * [Hosting your own packages](http://getcomposer.org/doc/05-repositories.md#hosting-your-own)
+Add the following lines to your composer.json:
+
+```json
+    "repositories": [
+        ...
+        {
+            "type":"vcs",
+            "url":"git@github.com:theodo/theodo-evolution.git"
+        }
+        ...
+    ],
+    "require": {
+        ...
+        "theodo-evolution/http-foundation": "dev-http-foundation-bundle"
+        ...
+    },
+
+```
 
 ##Configuration
-
-### Legacy app made with symfony 1.0
 
 * Add the bundles in your app/AppKernel.php:
 
@@ -67,7 +78,19 @@ public function registerBundles()
 }
 ```
 
-* That's all!
+* Require the configuration file:
+
+```yaml
+# app/config/config.yml
+imports:
+    - { resource: "@TheodoEvolutionHttpFoundationBundle/Resources/config/services/session.yml" }
+```
+
+* Choose a BagManager from existing ones or use `TheodoEvolution\HttpFoundationBundle\Manager\BagManagerInterface` to create a new one
+* Register the BagManager class as a parameter named `evolution.session.bag_manager.class` in your configuration
+* Register the BagManagerConfiguration class as a parameter named `evolution.session.bag_manager_configuration.class`
+* Define your session name in config.yml (`framework:session:name`) to reuse your legacy cookie name
+* Define your session path (`framework:session:session_path`) and other configuration variables if needed (best method - make a `phpinfo()` inside your legacy application to find the correct values)
 
 ## HowTo
 
