@@ -3,10 +3,7 @@
 namespace TheodoEvolution\HttpFoundationBundle\Manager\VendorSpecific;
 
 use TheodoEvolution\HttpFoundationBundle\Manager\BagManager;
-use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
-use Symfony\Component\HttpFoundation\Session\Attribute\NamespacedAttributeBag;
-use TheodoEvolution\HttpFoundationBundle\Attribute\ScalarBag;
 
 /**
  * EvolutionAttributeBag class.
