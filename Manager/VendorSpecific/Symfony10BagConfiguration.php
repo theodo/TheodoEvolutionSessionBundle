@@ -11,7 +11,7 @@ use TheodoEvolution\HttpFoundationBundle\Manager\BagManagerConfigurationInterfac
  */
 class Symfony10BagConfiguration implements BagManagerConfigurationInterface
 {
-    private $namespaces = array(
+    private static $namespaces = array(
         BagManagerConfigurationInterface::LAST_REQUEST_NAMESPACE => 'symfony/user/sfUser/lastRequest',
         BagManagerConfigurationInterface::AUTH_NAMESPACE         => 'symfony/user/sfUser/authenticated',
         BagManagerConfigurationInterface::CREDENTIAL_NAMESPACE   => 'symfony/user/sfUser/credentials',
@@ -22,16 +22,16 @@ class Symfony10BagConfiguration implements BagManagerConfigurationInterface
     /**
      * {@inheritdoc}
      */
-    public function getNamespaces()
+    public static function getNamespaces()
     {
-        return $this->namespaces;
+        return self::$namespaces;
     }
 
     public function isArray($namespaceName)
     {
         switch ($namespaceName) {
-            case $this->namespaces['attribute_namespace']:
-            case $this->namespaces['credential_namespace']:
+            case self::$namespaces['attribute_namespace']:
+            case self::$namespaces['credential_namespace']:
                 return true;
             default:
                 return false;
