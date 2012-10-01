@@ -18,7 +18,15 @@ interface BagManagerConfigurationInterface
      *
      * @return array
      */
-    public static function getNamespaces();
+    public function getNamespaces();
+
+    /**
+     * Gets a session namespace from a namespace key.
+     * A session namespace is a key in $_SESSION array.
+     *
+     * @return array
+     */
+    public function getNamespace($key);
 
     /**
      * Returns if the namespace is an array of namespaces.
