@@ -18,7 +18,7 @@ interface BagManagerConfigurationInterface
      *
      * @return array
      */
-    public function getNamespaces();
+    public static function getNamespaces();
 
     /**
      * Returns if the namespace is an array of namespaces.
