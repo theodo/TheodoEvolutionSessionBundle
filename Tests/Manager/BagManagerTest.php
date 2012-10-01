@@ -1,15 +1,15 @@
 <?php
-namespace TheodoEvolution\HttpFoundationBundle\Manager;
+namespace Theodo\Evolution\HttpFoundationBundle\Manager;
 
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage;
-use TheodoEvolution\HttpFoundationBundle\Manager\BagManager;
+use Theodo\Evolution\HttpFoundationBundle\Manager\BagManager;
 
 class BagManagerTest extends \PHPUnit_Framework_TestCase
 {
     public function testInitialize()
     {
-        $configuration = $this->getMock('TheodoEvolution\HttpFoundationBundle\Manager\BagManagerConfigurationInterface');
+        $configuration = $this->getMock('Theodo\Evolution\HttpFoundationBundle\Manager\BagManagerConfigurationInterface');
         $configuration->expects($this->once())
             ->method('getNamespaces')
             ->will($this->returnValue(array('array', 'scalar')))
@@ -27,6 +27,6 @@ class BagManagerTest extends \PHPUnit_Framework_TestCase
         $manager->initialize($session);
 
         $this->assertInstanceOf('Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag', $session->getBag('array'));
-        $this->assertInstanceOf('TheodoEvolution\HttpFoundationBundle\Attribute\ScalarBag', $session->getBag('scalar'));
+        $this->assertInstanceOf('Theodo\Evolution\HttpFoundationBundle\Attribute\ScalarBag', $session->getBag('scalar'));
     }
 }

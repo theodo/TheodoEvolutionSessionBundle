@@ -1,5 +1,5 @@
 {
-    "name": "theodo-evolution/http-foundation",
+    "name": "theodo/evolution-http-foundation-bundle",
     "type": "library",
     "description": "The \"Theodo Evolution Http Foundation\" bundle",
     "keywords": [],
@@ -35,7 +35,7 @@
         ]
     },
     "minimum-stability": "dev",
-    "target-dir": "TheodoEvolution/HttpFoundationBundle",
+    "target-dir": "Theodo/Evolution/HttpFoundationBundle",
     "extra": {
         "symfony-app-dir": "../../app",
         "symfony-web-dir": "../../web"
