@@ -1,6 +1,6 @@
 <?php
 
-namespace TheodoEvolution\HttpFoundationBundle\DependencyInjection;
+namespace Theodo\Evolution\HttpFoundationBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;

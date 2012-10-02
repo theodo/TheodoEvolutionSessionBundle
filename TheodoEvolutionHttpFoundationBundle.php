@@ -1,10 +1,10 @@
 <?php
 
-namespace TheodoEvolution\HttpFoundationBundle;
+namespace Theodo\Evolution\HttpFoundationBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use TheodoEvolution\HttpFoundationBundle\DependencyInjection\Compiler\SessionPass;
+use Theodo\Evolution\HttpFoundationBundle\DependencyInjection\Compiler\SessionPass;
 
 class TheodoEvolutionHttpFoundationBundle extends Bundle
 {

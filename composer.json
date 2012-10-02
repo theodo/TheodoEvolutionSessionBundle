@@ -1,6 +1,6 @@
 {
-    "name": "theodo-evolution/http-foundation",
-    "type": "library",
+    "name": "theodo/evolution-http-foundation-bundle",
+    "type": "symfony-bundle",
     "description": "The \"Theodo Evolution Http Foundation\" bundle",
     "keywords": [],
     "homepage": "http://www.theodo.fr",
@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "TheodoEvolution\\HttpFoundationBundle": ""
+            "Theodo\\Evolution\\HttpFoundationBundle": ""
         }
     },
     "require": {
@@ -35,7 +35,7 @@
         ]
     },
     "minimum-stability": "dev",
-    "target-dir": "TheodoEvolution/HttpFoundationBundle",
+    "target-dir": "Theodo/Evolution/HttpFoundationBundle",
     "extra": {
         "symfony-app-dir": "../../app",
         "symfony-web-dir": "../../web"
