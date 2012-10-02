@@ -58,7 +58,7 @@ Add the following lines to your composer.json:
     ],
     "require": {
         ...
-        "theodo-evolution/http-foundation": "dev-http-foundation-bundle"
+        "theodo/evolution-http-foundation-bundle": "dev-http-foundation-bundle"
         ...
     },
 
