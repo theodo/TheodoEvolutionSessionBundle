@@ -20,7 +20,7 @@
 
     <target name="phpunit" depends="composer">
         <exec dir="${basedir}" executable="phpunit" failonerror="true">
-            <arg value="--log-junit ${basedir}/build/logs/phpunit-log.xml"/>
+            <arg line="--log-junit ${basedir}/build/logs/phpunit-log.xml"/>
         </exec>
     </target>
 
