@@ -1,0 +1,26 @@
+<project name="Theodo Evolution Http Foundation Bundle" default="build">
+    <target name="clean">
+        <delete dir="${basedir}/build"/>
+    </target>
+
+    <target name="prepare">
+        <mkdir dir="${basedir}/build/logs"/>
+    </target>
+
+    <target name="composer">
+        <exec executable="bash"> 
+            <arg value="-c"/>
+            <arg value="curl -s https://getcomposer.org/installer | php"/>
+        </exec>
+        <exec executable="php"> 
+            <arg value="composer.phar"/>
+            <arg value="install"/>
+        </exec>
+    </target> 
+
+    <target name="phpunit" depends="composer">
+        <exec dir="${basedir}" executable="phpunit" failonerror="true"></exec>
+    </target>
+
+    <target name="build" depends="clean,prepare,phpunit"/>
+</project>
