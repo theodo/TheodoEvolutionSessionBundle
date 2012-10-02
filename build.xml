@@ -19,7 +19,9 @@
     </target> 
 
     <target name="phpunit" depends="composer">
-        <exec dir="${basedir}" executable="phpunit" failonerror="true"></exec>
+        <exec dir="${basedir}" executable="phpunit" failonerror="true">
+            <arg value="--log-junit ${basedir}/build/logs/phpunit-log.xml"/>
+        </exec>
     </target>
 
     <target name="build" depends="clean,prepare,phpunit"/>
