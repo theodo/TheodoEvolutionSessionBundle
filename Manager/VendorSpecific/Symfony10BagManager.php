@@ -24,7 +24,9 @@ class Symfony10BagManager extends BagManager
 
         $namespaces = $this->configuration->getNamespaces();
 
-        // @todo Ask Benajmin why this has to be done
+        /* Symfony1 keeps the last request value here
+         * update it as if it was Symfony1 who acessed it
+         */
         $session->getBag($namespaces['last_request_namespace'])->set(time());
     }
 }
