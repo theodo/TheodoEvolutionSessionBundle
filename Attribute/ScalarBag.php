@@ -24,13 +24,6 @@ class ScalarBag implements SessionBagInterface
     protected $value;
 
     /**
-     * This represents a value in $_SESSION
-     *
-     * @var mixed
-     */
-    protected $sessionEntry;
-
-    /**
      * Constructor.
      *
      * @param string $storageKey The key used to store flashes in the session.
