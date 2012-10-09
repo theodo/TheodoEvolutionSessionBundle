@@ -63,6 +63,7 @@ class ScalarBag implements SessionBagInterface
     {
         $this->value = !empty($array) ? reset($array) : null;
         $array = $this->value;
+        $this->value = &$array;
     }
 
     /**
@@ -107,5 +108,15 @@ class ScalarBag implements SessionBagInterface
     public function getValue()
     {
         return $this->get();
+    }
+
+    public function getIterator()
+    {
+        return new \ArrayIterator(array($this->value));
+    }
+
+    public function count()
+    {
+        return 1;
     }
 }
