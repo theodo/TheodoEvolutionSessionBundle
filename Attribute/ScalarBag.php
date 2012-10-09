@@ -55,14 +55,15 @@ class ScalarBag implements SessionBagInterface
     }
 
     /**
-     * Initializes the Bag
+     * Initializes the Bag by scalarizing the array and keeping the reference.
+     * The reference is needed as the set() methods has to also modify the $_SESSION 
+     * variable
      *
      * @param array $array
      */
     public function initialize(array &$array)
     {
-        $this->value = !empty($array) ? reset($array) : null;
-        $array = $this->value;
+        $array = !empty($array) ? reset($array) : null;
         $this->value = &$array;
     }
 
