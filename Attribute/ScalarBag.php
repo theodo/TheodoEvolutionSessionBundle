@@ -24,6 +24,13 @@ class ScalarBag implements SessionBagInterface
     protected $value;
 
     /**
+     * This represents a value in $_SESSION
+     *
+     * @var mixed
+     */
+    protected $sessionEntry;
+
+    /**
      * Constructor.
      *
      * @param string $storageKey The key used to store flashes in the session.
@@ -63,6 +70,7 @@ class ScalarBag implements SessionBagInterface
     {
         $this->value = !empty($array) ? reset($array) : null;
         $array = $this->value;
+        $this->value = &$array;
     }
 
     /**
@@ -107,5 +115,15 @@ class ScalarBag implements SessionBagInterface
     public function getValue()
     {
         return $this->get();
+    }
+
+    public function getIterator()
+    {
+        return new \ArrayIterator(array($this->value));
+    }
+
+    public function count()
+    {
+        return 1;
     }
 }

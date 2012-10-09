@@ -24,6 +24,17 @@ class ScalarBagTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($expected, $bag->get());
     }
 
+    public function testSessionSetting()
+    {
+        $bag = new ScalarBag('bag');
+        $sessionEntry = array();
+
+        $bag->initialize($sessionEntry);
+        $bag->set(true);
+
+        $this->assertTrue($sessionEntry);
+    }
+
     public function getSessions()
     {
         return array(
@@ -33,3 +44,4 @@ class ScalarBagTest extends \PHPUnit_Framework_TestCase
         );
     }
 }
+

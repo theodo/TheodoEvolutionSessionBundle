@@ -26,13 +26,19 @@ class BagManager implements BagManagerInterface
         $namespaces = $this->configuration->getNamespaces();
 
         foreach ($namespaces as $namespace) {
-            if ($this->configuration->isArray($namespace)) {
-                $bag = new NamespacedAttributeBag($namespace, '.');
-            } else {
-                $bag = new ScalarBag($namespace);
+            try {
+                $session->getBag($namespace);
+            } catch (\InvalidArgumentException $e) {
+                // Only create bags if they do not exist
+                if ($this->configuration->isArray($namespace)) {
+                    $bag = new NamespacedAttributeBag($namespace, '.');
+                } else {
+                    $bag = new ScalarBag($namespace);
+                }
+                $bag->setName($namespace);
+                $session->registerBag($bag);
             }
-            $bag->setName($namespace);
-            $session->registerBag($bag);
         }
     }
 }
+
