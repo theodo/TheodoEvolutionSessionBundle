@@ -6,7 +6,7 @@
 
 Theodo Evolution is a set of tools, methodologies and software components, making the code of a legacy php application more maintainable, easily scalable, secure and fast.
 
-##TheodoEvolutionHttpFoundationBundle
+##TheodoEvolutionSessionIntegrationBundle
 
 This bundle provides the legacy session to the sf2 app.
 
@@ -21,10 +21,10 @@ Works for legacy app made with:
 * 1. Add this in your deps file:
 
 ```
-[TheodoEvolutionHttpFoundationBundle]
-    git=https://github.com/theodo/theodo-evolution.git
-    version=origin/http-foundation-bundle
-    target=../src/TheodoEvolution/HttpFoundationBundle
+[TheodoEvolutionSessionIntegrationBundle]
+    git=git@github.com:theodo/SessionIntegrationBundle.git
+    version=origin/master
+    target=../src/TheodoEvolution/SessionIntegrationBundle
 ```
 
 * 2. Then execute this command in the root of your project:
@@ -39,7 +39,7 @@ $ bin/vendors install
 $loader->registerNamespaces(array(
     
     // Some namespaces
-    'TheodoEvolution\\HttpFoundationBundle'   => __DIR__.'/../src/TheodoEvolution/HttpFoundationBundle',
+    'TheodoEvolution\\SessionIntegrationBundle'   => __DIR__.'/../src/TheodoEvolution/SessionIntegrationBundle',
 ));
 ```
 
@@ -58,7 +58,7 @@ Add the following lines to your composer.json:
     ],
     "require": {
         ...
-        "theodo/evolution-http-foundation-bundle": "dev-http-foundation-bundle"
+        "theodo/evolution-session-integration-bundle": "dev-session-integration-bundle"
         ...
     },
 
@@ -73,7 +73,7 @@ public function registerBundles()
 {
     $bundles = array(
         //vendors, other bundles...
-        new Theodo\Evolution\HttpFoundationBundle\TheodoEvolutionHttpFoundationBundle(),
+        new Theodo\Evolution\SessionIntegrationBundle\TheodoEvolutionSessionIntegrationBundle(),
     );
 }
 ```
@@ -83,12 +83,12 @@ public function registerBundles()
 ```yaml
 # app/config/config.yml
 imports:
-    - { resource: "@TheodoEvolutionHttpFoundationBundle/Resources/config/services/session.yml" }
+    - { resource: "@TheodoEvolutionSessionIntegrationBundle/Resources/config/services/session.yml" }
 ```
 
 * Register a BagManager as a parameter named `evolution.session.bag_manager.class`:
-  choose from existing ones (in Theodo\Evolution\HttpFoundationBundle\Manager)
-  or use the `Theodo\Evolution\HttpFoundationBundle\Manager\BagManagerInterface` to create a new one
+  choose from existing ones (in Theodo\Evolution\SessionIntegrationBundle\Manager)
+  or use the `Theodo\Evolution\SessionIntegrationBundle\Manager\BagManagerInterface` to create a new one
 * Register the BagManagerConfiguration class as a parameter named `evolution.session.bag_manager_configuration.class`
 * Define your session name in config.yml (`framework:session:name`) to reuse your legacy cookie name
 * Define your session path (`framework:session:session_path`) and other configuration variables if needed (best method - make a `phpinfo()` inside your legacy application to find the correct values)
@@ -97,4 +97,4 @@ imports:
 
 **TODO**: Test the service on another legacy project.
 
-Tip: look at the [Tests](https://github.com/theodo/theodo-evolution/tree/http-foundation-bundle/Tests)
+Tip: look at the [Tests](git@github.com:theodo/SessionIntegrationBundle/tree/master/Tests)

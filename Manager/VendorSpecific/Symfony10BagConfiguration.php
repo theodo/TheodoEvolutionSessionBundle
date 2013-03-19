@@ -1,7 +1,7 @@
 <?php
-namespace Theodo\Evolution\HttpFoundationBundle\Manager\VendorSpecific;
+namespace Theodo\Evolution\SessionIntegrationBundle\Manager\VendorSpecific;
 
-use Theodo\Evolution\HttpFoundationBundle\Manager\BagManagerConfigurationInterface;
+use Theodo\Evolution\SessionIntegrationBundle\Manager\BagManagerConfigurationInterface;
 
 /**
  * This class contains configuration for Symfony 1.0 namespaces

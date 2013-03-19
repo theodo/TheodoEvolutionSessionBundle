@@ -1,10 +1,10 @@
 <?php
 
-namespace Theodo\Evolution\HttpFoundationBundle\Listener;
+namespace Theodo\Evolution\SessionIntegrationBundle\Listener;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
-use Theodo\Evolution\HttpFoundationBundle\Manager\BagManagerInterface;
+use Theodo\Evolution\SessionIntegrationBundle\Manager\BagManagerInterface;
 use Symfony\Component\HttpKernel\HttpKernelInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 

@@ -1,4 +1,4 @@
-<project name="Theodo Evolution Http Foundation Bundle" default="build">
+<project name="Theodo Evolution Session Integration Bundle" default="build">
     <target name="clean">
         <delete dir="${basedir}/build"/>
     </target>

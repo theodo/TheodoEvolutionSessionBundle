@@ -1,7 +1,7 @@
 {
-    "name": "theodo/evolution-http-foundation-bundle",
+    "name": "theodo/evolution-session-integration-bundle",
     "type": "symfony-bundle",
-    "description": "The \"Theodo Evolution Http Foundation\" bundle",
+    "description": "The \"Theodo Evolution Session Integration\" bundle",
     "keywords": [],
     "homepage": "http://www.theodo.fr",
     "authors": [
@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Theodo\\Evolution\\HttpFoundationBundle": ""
+            "Theodo\\Evolution\\SessionIntegrationBundle": ""
         }
     },
     "require": {
@@ -35,7 +35,7 @@
         ]
     },
     "minimum-stability": "dev",
-    "target-dir": "Theodo/Evolution/HttpFoundationBundle",
+    "target-dir": "Theodo/Evolution/SessionIntegrationBundle",
     "extra": {
         "symfony-app-dir": "../../app",
         "symfony-web-dir": "../../web"

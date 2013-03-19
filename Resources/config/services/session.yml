@@ -1,10 +1,10 @@
 parameters:
-    evolution.session.storage.native.class:     Theodo\Evolution\HttpFoundationBundle\Storage\NativeSessionStorage
-    evolution.session.storage.mock_file.class:  Theodo\Evolution\HttpFoundationBundle\Storage\MockFileSessionStorage
-    evolution.session_listener.class:           Theodo\Evolution\HttpFoundationBundle\Listener\SessionListener
+    evolution.session.storage.native.class:     Theodo\Evolution\SessionIntegrationBundle\Storage\NativeSessionStorage
+    evolution.session.storage.mock_file.class:  Theodo\Evolution\SessionIntegrationBundle\Storage\MockFileSessionStorage
+    evolution.session_listener.class:           Theodo\Evolution\SessionIntegrationBundle\Listener\SessionListener
 
     #Bag managers
-    evolution.session.symfony10_bag_manager.class: Theodo\Evolution\HttpFoundationBundle\Manager\Symfony10BagManager
+    evolution.session.symfony10_bag_manager.class: Theodo\Evolution\SessionIntegrationBundle\Manager\Symfony10BagManager
 
 services:
     evolution.session_listener:

@@ -1,6 +1,6 @@
 <?php
 
-namespace Theodo\Evolution\HttpFoundationBundle\Storage;
+namespace Theodo\Evolution\SessionIntegrationBundle\Storage;
 
 use Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage as BaseSessionStorage;
 
