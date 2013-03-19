@@ -2,24 +2,24 @@
 
 namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Tests\Manager\VendorSpecific;
 
-use Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony10BagManager;
-use Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony10BagConfiguration;
+use Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagManager;
+use Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagConfiguration;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage;
 
 /**
- * Symfony10BagManagerTest class.
+ * Symfony1xBagManagerTest class.
  *
  * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
  */
-class Symfony10BagManagerTest extends \PHPUnit_Framework_TestCase
+class Symfony1xBagManagerTest extends \PHPUnit_Framework_TestCase
 {
     public function testInitialize()
     {
         $session = new Session(new MockArraySessionStorage());
 
-        $configuration = new Symfony10BagConfiguration();
-        $manager = new Symfony10BagManager($configuration);
+        $configuration = new Symfony1xBagConfiguration();
+        $manager = new Symfony1xBagManager($configuration);
         $manager->initialize($session);
 
         foreach ($configuration->getNamespaces() as $namespace) {

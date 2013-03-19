@@ -12,7 +12,7 @@ This bundle provides the legacy session to the sf2 app.
 
 Works for legacy app made with:
 
-* Symfony 1.0
+* Symfony 1.x
 
 ##Installation
 
@@ -52,7 +52,7 @@ Add the following lines to your composer.json:
         ...
         {
             "type":"vcs",
-            "url":"git@github.com:theodo/theodo-evolution.git"
+            "url":"git@github.com:theodo/SessionIntegrationBundle.git"
         }
         ...
     ],

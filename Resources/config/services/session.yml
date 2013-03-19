@@ -4,7 +4,7 @@ parameters:
     evolution.session_listener.class:           Theodo\Evolution\Bundle\SessionIntegrationBundle\Listener\SessionListener
 
     #Bag managers
-    evolution.session.symfony10_bag_manager.class: Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\Symfony10BagManager
+    evolution.session.symfony1x_bag_manager.class: Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\Symfony1xBagManager
 
 services:
     evolution.session_listener:

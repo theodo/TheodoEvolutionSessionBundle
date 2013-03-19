@@ -1,15 +1,16 @@
 <?php
+
 namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific;
 
 use Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\BagManagerConfigurationInterface;
 
 /**
- * This class contains configuration for Symfony 1.0 namespaces
+ * This class contains configuration for Symfony 1.x namespaces
  *
  * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
  * @author Marek Kalnik <marekk@theodo.fr>
  */
-class Symfony10BagConfiguration implements BagManagerConfigurationInterface
+class Symfony1xBagConfiguration implements BagManagerConfigurationInterface
 {
     private $namespaces = array(
         BagManagerConfigurationInterface::LAST_REQUEST_NAMESPACE => 'symfony/user/sfUser/lastRequest',

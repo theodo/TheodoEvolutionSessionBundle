@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
  * @author Marek Kalnik <marekk@theodo.fr>
  */
-class Symfony10BagManager extends BagManager
+class Symfony1xBagManager extends BagManager
 {
     protected $locale;
 
