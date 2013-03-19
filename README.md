@@ -78,13 +78,6 @@ public function registerBundles()
 }
 ```
 
-* Require the configuration file:
-
-```yaml
-# app/config/config.yml
-imports:
-    - { resource: "@TheodoEvolutionSessionIntegrationBundle/Resources/config/services/session.yml" }
-```
 
 * Register a BagManager as a parameter named `evolution.session.bag_manager.class`:
   choose from existing ones (in Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager)
