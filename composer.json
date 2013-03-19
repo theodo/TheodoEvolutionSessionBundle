@@ -12,7 +12,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Theodo\\Evolution\\SessionIntegrationBundle": ""
+            "Theodo\\Evolution\\Bundle\\SessionIntegrationBundle": ""
         }
     },
     "require": {
@@ -35,7 +35,7 @@
         ]
     },
     "minimum-stability": "dev",
-    "target-dir": "Theodo/Evolution/SessionIntegrationBundle",
+    "target-dir": "Theodo/Evolution/Bundle/SessionIntegrationBundle",
     "extra": {
         "symfony-app-dir": "../../app",
         "symfony-web-dir": "../../web"

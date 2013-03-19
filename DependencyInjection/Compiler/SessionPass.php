@@ -1,6 +1,6 @@
 <?php
 
-namespace Theodo\Evolution\SessionIntegrationBundle\DependencyInjection\Compiler;
+namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\DependencyInjection\Compiler;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Theodo\Evolution\SessionIntegrationBundle\Manager\VendorSpecific;
+namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific;
 
-use Theodo\Evolution\SessionIntegrationBundle\Manager\BagManager;
+use Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\BagManager;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**

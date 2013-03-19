@@ -1,6 +1,6 @@
 <?php
 
-namespace Theodo\Evolution\SessionIntegrationBundle\Manager;
+namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 

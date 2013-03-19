@@ -73,7 +73,7 @@ public function registerBundles()
 {
     $bundles = array(
         //vendors, other bundles...
-        new Theodo\Evolution\SessionIntegrationBundle\TheodoEvolutionSessionIntegrationBundle(),
+        new Theodo\Evolution\Bundle\SessionIntegrationBundle\TheodoEvolutionSessionIntegrationBundle(),
     );
 }
 ```
@@ -87,8 +87,8 @@ imports:
 ```
 
 * Register a BagManager as a parameter named `evolution.session.bag_manager.class`:
-  choose from existing ones (in Theodo\Evolution\SessionIntegrationBundle\Manager)
-  or use the `Theodo\Evolution\SessionIntegrationBundle\Manager\BagManagerInterface` to create a new one
+  choose from existing ones (in Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager)
+  or use the `Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\BagManagerInterface` to create a new one
 * Register the BagManagerConfiguration class as a parameter named `evolution.session.bag_manager_configuration.class`
 * Define your session name in config.yml (`framework:session:name`) to reuse your legacy cookie name
 * Define your session path (`framework:session:session_path`) and other configuration variables if needed (best method - make a `phpinfo()` inside your legacy application to find the correct values)

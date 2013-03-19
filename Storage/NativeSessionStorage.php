@@ -1,6 +1,6 @@
 <?php
 
-namespace Theodo\Evolution\SessionIntegrationBundle\Storage;
+namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Storage;
 
 use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage as BaseSessionStorage;
 

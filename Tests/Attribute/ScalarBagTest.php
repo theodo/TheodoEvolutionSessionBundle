@@ -1,8 +1,8 @@
 <?php
 
-namespace Theodo\Evolution\SessionIntegrationBundle\Tests\Attribute;
+namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Tests\Attribute;
 
-use Theodo\Evolution\SessionIntegrationBundle\Attribute\ScalarBag;
+use Theodo\Evolution\Bundle\SessionIntegrationBundle\Attribute\ScalarBag;
 
 /**
  * ScalarBag class.
