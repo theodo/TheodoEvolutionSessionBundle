@@ -8,9 +8,9 @@ Theodo Evolution is a set of tools, methodologies and software components, makin
 
 ##TheodoEvolutionSessionIntegrationBundle
 
-This bundle provides the legacy session to the sf2 app.
+This bundle allows the sf2 app to access the legacy session.
 
-Works for legacy app made with:
+Works so far for legacy app made with:
 
 * Symfony 1.x
 
@@ -94,7 +94,5 @@ imports:
 * Define your session path (`framework:session:session_path`) and other configuration variables if needed (best method - make a `phpinfo()` inside your legacy application to find the correct values)
 
 ## HowTo
-
-**TODO**: Test the service on another legacy project.
 
 Tip: look at the [Tests](git@github.com:theodo/SessionIntegrationBundle/tree/master/Tests)
