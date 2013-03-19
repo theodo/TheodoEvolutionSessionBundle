@@ -91,8 +91,5 @@ imports:
   or use the `Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\BagManagerInterface` to create a new one
 * Register the BagManagerConfiguration class as a parameter named `evolution.session.bag_manager_configuration.class`
 * Define your session name in config.yml (`framework:session:name`) to reuse your legacy cookie name
-* Define your session path (`framework:session:session_path`) and other configuration variables if needed (best method - make a `phpinfo()` inside your legacy application to find the correct values)
+* Define your session path (`framework:session:save_path`) and other configuration variables if needed (best method - make a `phpinfo()` inside your legacy application to find the correct values)
 
-## HowTo
-
-Tip: look at the [Tests](git@github.com:theodo/SessionIntegrationBundle/tree/master/Tests)
