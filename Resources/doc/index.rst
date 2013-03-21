@@ -18,7 +18,8 @@ Installation
 
 Add the following lines to your composer.json:
 
-.. code-block::
+::
+
     "repositories": [
         ...
         {
@@ -33,16 +34,17 @@ Add the following lines to your composer.json:
 
 And run composer:
 
-.. code-block::
-    php composer.phar update theodo/evolution-session-integration-bundle
+::
 
+    php composer.phar update theodo/evolution-session-integration-bundle
 
 Configuration
 =============
 
 * Register the bundles in your app/AppKernel.php:
 
-.. code-block::
+::
+
     // app/AppKernel.php
 
     public function registerBundles()
@@ -55,7 +57,8 @@ Configuration
 
 * Choose the BagManager and the corresponding BagConfiguration you want to use:
 
-.. code-block::
+::
+
     # app/config/parameters.yml
 
     ...
@@ -71,7 +74,8 @@ or use the `Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\BagManagerI
   * define your session path (`framework:session:save_path`)
   * define other configuration variables if needed (best method - make a `phpinfo()` inside your legacy application to find the correct values)
 
-.. code-block::
+::
+
     # app/config/config.yml
 
     framework:
