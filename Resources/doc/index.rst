@@ -20,13 +20,6 @@ Add the following lines to your composer.json:
 
 ::
 
-    "repositories": [
-        ...
-        {
-            "type":"vcs",
-            "url":"git@github.com:theodo/TheodoEvolutionSessionIntegrationBundle.git"
-        }
-    ],
     "require": {
         ...
         "theodo/evolution-session-integration-bundle": "1.0.*"
