@@ -8,7 +8,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 /**
  * EvolutionAttributeBag class.
  *
- * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
+ * @author Benjamin Grandfond <benjaming@theodo.fr>
  * @author Marek Kalnik <marekk@theodo.fr>
  */
 class Symfony1xBagManager extends BagManager

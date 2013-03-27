@@ -5,8 +5,7 @@ namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\DependencyInjection;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use Symfony\Component\DependencyInjection\Loader;
-
+use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
 class TheodoEvolutionSessionIntegrationExtension extends Extension
 {
@@ -20,7 +19,7 @@ class TheodoEvolutionSessionIntegrationExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container)
     {
-        $this->loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config/services'));
-        $this->loader->load('session.yml');
+        $this->loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config/services'));
+        $this->loader->load('session.xml');
     }
 }

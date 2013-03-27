@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="theodo_evolution.session_integration.storage.native.class">Theodo\Evolution\Bundle\SessionIntegrationBundle\Storage\NativeSessionStorage</parameter>
+        <parameter key="theodo_evolution.session_integration.storage.mock_file.class">Theodo\Evolution\Bundle\SessionIntegrationBundle\Storage\MockFileSessionStorage</parameter>
+        <parameter key="theodo_evolution.session_integration.session_listener.class">Theodo\Evolution\Bundle\SessionIntegrationBundle\Listener\SessionListener</parameter>
+        <parameter key="theodo_evolution.session_integration.symfony1x_bag_manager.class">Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\Symfony1xBagManager</parameter>
+    </parameters>
+
+    <services>
+        <service id="theodo_evolution.session.session_listener" class="%theodo_evolution.session.session_listener.class%">
+            <argument type="service" id="theodo_evolution.session_integration.bag_manager" />
+            <tag name="kernel.event_subscriber" event="kernel.request"/>
+        </service>
+        <service id="theodo_evolution.session_integration.bag_manager_configuration" class="%theodo_evolution.session_integration.bag_manager_configuration.class%"/>
+        <service id="theodo_evolution.session_integration.bag_manager" class="%theodo_evolution.session_integration.bag_manager.class%">
+            <argument type="service" id="theodo_evolution.session_integration.bag_manager_configuration" />
+        </service>
+    </services>
+
+</container>

@@ -6,7 +6,7 @@ use Symfony\Component\HttpFoundation\Session\Attribute\NamespacedAttributeBag;
 use Theodo\Evolution\Bundle\SessionIntegrationBundle\Attribute\ScalarBag;
 
 /**
- * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
+ * @author Benjamin Grandfond <benjaming@theodo.fr>
  * @author Marek Kalnik <marekk@theodo.fr>
  */
 class BagManager implements BagManagerInterface
@@ -41,4 +41,3 @@ class BagManager implements BagManagerInterface
         }
     }
 }
-

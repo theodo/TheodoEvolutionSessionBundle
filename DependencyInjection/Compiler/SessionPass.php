@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 /**
  * SessionPass class.
  *
- * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
+ * @author Benjamin Grandfond <benjaming@theodo.fr>
  */
 class SessionPass implements CompilerPassInterface
 {
@@ -23,10 +23,9 @@ class SessionPass implements CompilerPassInterface
     {
         // Make the session service use Evolution native storage class.
         $container->getDefinition('session.storage.native')
-            ->setClass($container->getParameter('evolution.session.storage.native.class'));
+            ->setClass($container->getParameter('theodo_evolution.session_integration.storage.native.class'));
 
         $container->getDefinition('session.storage.mock_file')
-            ->setClass($container->getParameter('evolution.session.storage.mock_file.class'));
+            ->setClass($container->getParameter('theodo_evolution.session_integration.storage.mock_file.class'));
     }
-
 }

@@ -7,7 +7,7 @@ use Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\BagManagerConfigura
 /**
  * This class contains configuration for Symfony 1.x namespaces
  *
- * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
+ * @author Benjamin Grandfond <benjaming@theodo.fr>
  * @author Marek Kalnik <marekk@theodo.fr>
  */
 class Symfony1xBagConfiguration implements BagManagerConfigurationInterface

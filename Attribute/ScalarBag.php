@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 /**
  * ScalarBag class.
  *
- * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
+ * @author Benjamin Grandfond <benjaming@theodo.fr>
  */
 class ScalarBag implements SessionBagInterface
 {

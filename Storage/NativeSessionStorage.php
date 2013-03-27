@@ -5,13 +5,16 @@ namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Storage;
 use Symfony\Component\HttpFoundation\Session\Storage\NativeSessionStorage as BaseSessionStorage;
 
 /**
- * NativeSessionStorage class.
  *
- * @author Benjamin Grandfond <benjamin.grandfond@gmail.com>
+ *
+ * @author Benjamin Grandfond <benjaming@theodo.fr>
  */
 class NativeSessionStorage extends BaseSessionStorage
 {
     /**
+     * Casts every session item to an array. So it can resolve into Symfony bags without
+     * conflicts.
+     *
      * {@inheritdoc}
      */
     protected function loadSession(array &$session = null)
