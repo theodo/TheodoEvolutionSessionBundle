@@ -7,12 +7,12 @@
     <parameters>
         <parameter key="theodo_evolution.session_integration.storage.native.class">Theodo\Evolution\Bundle\SessionIntegrationBundle\Storage\NativeSessionStorage</parameter>
         <parameter key="theodo_evolution.session_integration.storage.mock_file.class">Theodo\Evolution\Bundle\SessionIntegrationBundle\Storage\MockFileSessionStorage</parameter>
-        <parameter key="theodo_evolution.session_integration.session_listener.class">Theodo\Evolution\Bundle\SessionIntegrationBundle\Listener\SessionListener</parameter>
+        <parameter key="theodo_evolution.session_integration.session_subscriber.class">Theodo\Evolution\Bundle\SessionIntegrationBundle\Listener\SessionSubscriber</parameter>
         <parameter key="theodo_evolution.session_integration.symfony1x_bag_manager.class">Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\Symfony1xBagManager</parameter>
     </parameters>
 
     <services>
-        <service id="theodo_evolution.session.session_listener" class="%theodo_evolution.session.session_listener.class%">
+        <service id="theodo_evolution.session.session_subscriber" class="%theodo_evolution.session.session_subscriber.class%">
             <argument type="service" id="theodo_evolution.session_integration.bag_manager" />
             <tag name="kernel.event_subscriber" event="kernel.request"/>
         </service>

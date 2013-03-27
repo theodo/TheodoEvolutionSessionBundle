@@ -13,7 +13,7 @@ use Symfony\Component\HttpKernel\KernelEvents;
  *
  * @author Benjamin Grandfond <benjaming@theodo.fr>
  */
-class SessionListener implements EventSubscriberInterface
+class SessionSubscriber implements EventSubscriberInterface
 {
     /**
      * @var \Theodo\EvolutionBundle\Session\Manager\BagManagerInterface
@@ -29,6 +29,8 @@ class SessionListener implements EventSubscriberInterface
     }
 
     /**
+     * Initializes the bag manager if it has not yet been done
+     *
      * @param  GetResponseEvent $event
      * @return mixed
      */
