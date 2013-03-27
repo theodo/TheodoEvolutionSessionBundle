@@ -1,5 +1,5 @@
 <?php
-namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager;
+namespace Theodo\Evolution\Bundle\SessionBundle\Manager;
 
 /**
  * This interface assures that proper session namespace handling

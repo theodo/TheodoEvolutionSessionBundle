@@ -1,13 +1,13 @@
 <?php
 
-namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\DependencyInjection;
+namespace Theodo\Evolution\Bundle\SessionBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
-class TheodoEvolutionSessionIntegrationExtension extends Extension
+class TheodoEvolutionSessionExtension extends Extension
 {
     /**
      * @var \Symfony\Component\DependencyInjection\Loader\YamlFileLoader

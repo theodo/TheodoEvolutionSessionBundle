@@ -1,5 +1,5 @@
-Theodo Evolution SessionIntegrationBundle
-=========================================
+Theodo Evolution SessionBundle
+==============================
 
 This bundle allows a Symfony 2 application to access the legacy session. We already support session sharing with:
 

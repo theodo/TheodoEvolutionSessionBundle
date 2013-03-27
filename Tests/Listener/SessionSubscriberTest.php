@@ -1,16 +1,16 @@
 <?php
 
-namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Listener;
+namespace Theodo\Evolution\Bundle\SessionBundle\Listener;
 
 use Symfony\Component\HttpKernel\HttpKernelInterface;
-use Theodo\Evolution\Bundle\SessionIntegrationBundle\Listener\SessionSubscriber;
+use Theodo\Evolution\Bundle\SessionBundle\Listener\SessionSubscriber;
 
 class SessionSubscriberTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
         $this->request = $this->getMock('Symfony\Component\HttpFoundation\Request');
-        $this->bagManager = $this->getMock('Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\BagManagerInterface');
+        $this->bagManager = $this->getMock('Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface');
         $this->listener = new SessionSubscriber($this->bagManager);
 
         $this->request->expects($this->any())

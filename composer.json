@@ -1,5 +1,5 @@
 {
-    "name": "theodo-evolution/session-integration-bundle",
+    "name": "theodo-evolution/session-bundle",
     "type": "symfony-bundle",
     "description": "The \"Theodo Evolution Session Integration\" bundle",
     "keywords": ["session", "symfony1", "symfony2"],
@@ -21,10 +21,10 @@
         "phpunit/phpunit": "3.7.*"
     },
     "minimum-stability": "dev",
-    "target-dir": "Theodo/Evolution/Bundle/SessionIntegrationBundle",
+    "target-dir": "Theodo/Evolution/Bundle/SessionBundle",
     "autoload": {
         "psr-0": {
-            "Theodo\\Evolution\\Bundle\\SessionIntegrationBundle": ""
+            "Theodo\\Evolution\\Bundle\\SessionBundle": ""
         }
     },
     "extra": {

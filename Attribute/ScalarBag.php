@@ -1,6 +1,6 @@
 <?php
 
-namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Attribute;
+namespace Theodo\Evolution\Bundle\SessionBundle\Attribute;
 
 use Symfony\Component\HttpFoundation\Session\SessionBagInterface;
 

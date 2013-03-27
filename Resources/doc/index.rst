@@ -4,8 +4,8 @@ What is Theodo Evolution?
 Theodo Evolution is a set of tools, methodologies and software components, making the code of a legacy php application
 more maintainable, easily scalable, secure and fast.
 
-Theodo Evolution's SessionIntegrationBundle
-===========================================
+Theodo Evolution's SessionBundle
+================================
 
 This bundle allows a Symfony 2 application to access the legacy session.
 
@@ -22,14 +22,14 @@ Add the following lines to your composer.json:
 
     "require": {
         ...
-        "theodo-evolution/session-integration-bundle": "1.0.*"
+        "theodo-evolution/session-bundle": "1.0.*"
     },
 
 And run composer:
 
 ::
 
-    php composer.phar update theodo-evolution/session-integration-bundle
+    php composer.phar update theodo-evolution/session-bundle
 
 Configuration
 =============
@@ -44,7 +44,7 @@ Configuration
     {
         $bundles = array(
             //vendors, other bundles...
-            new Theodo\Evolution\Bundle\SessionIntegrationBundle\TheodoEvolutionSessionIntegrationBundle(),
+            new Theodo\Evolution\Bundle\SessionBundle\TheodoEvolutionSessionBundle(),
         );
     }
 
@@ -55,12 +55,12 @@ Configuration
     # app/config/parameters.yml
 
     ...
-    theodo_evolution.session_integration.bag_manager.class: Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagManager
-    theodo_evolution.session_integration.bag_manager_configuration.class: Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagConfiguration
+    theodo_evolution.session.bag_manager.class: Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagManager
+    theodo_evolution.session.bag_manager_configuration.class: Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagConfiguration
 
 
-Choose BagManager from existing ones (in Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager)
-or use the `Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\BagManagerInterface` to create a new one
+Choose BagManager from existing ones (in Theodo\Evolution\Bundle\SessionBundle\Manager)
+or use the `Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface` to create a new one
 
 * In config.yml:
   * define your session name (`framework:session:name`) to reuse your legacy cookie name

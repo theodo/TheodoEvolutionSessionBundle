@@ -1,9 +1,9 @@
 <?php
 
-namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Tests\Manager\VendorSpecific;
+namespace Theodo\Evolution\Bundle\SessionBundle\Tests\Manager\VendorSpecific;
 
-use Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagManager;
-use Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagConfiguration;
+use Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagManager;
+use Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagConfiguration;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\HttpFoundation\Session\Storage\MockArraySessionStorage;
 
@@ -26,7 +26,7 @@ class Symfony1xBagManagerTest extends \PHPUnit_Framework_TestCase
             if ($configuration->isArray($namespace)) {
                 $this->assertInstanceOf('Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag', $session->getBag($namespace));
             } else {
-                $this->assertInstanceOf('Theodo\Evolution\Bundle\SessionIntegrationBundle\Attribute\ScalarBag', $session->getBag($namespace));
+                $this->assertInstanceOf('Theodo\Evolution\Bundle\SessionBundle\Attribute\ScalarBag', $session->getBag($namespace));
             }
         }
     }

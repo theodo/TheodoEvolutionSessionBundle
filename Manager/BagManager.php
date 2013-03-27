@@ -1,9 +1,9 @@
 <?php
-namespace Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager;
+namespace Theodo\Evolution\Bundle\SessionBundle\Manager;
 
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\HttpFoundation\Session\Attribute\NamespacedAttributeBag;
-use Theodo\Evolution\Bundle\SessionIntegrationBundle\Attribute\ScalarBag;
+use Theodo\Evolution\Bundle\SessionBundle\Attribute\ScalarBag;
 
 /**
  * @author Benjamin Grandfond <benjaming@theodo.fr>
