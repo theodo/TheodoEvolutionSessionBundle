@@ -5,6 +5,7 @@
 
     <target name="prepare">
         <mkdir dir="${basedir}/build/logs"/>
+        <mkdir dir="${basedir}/build/coverage"/>
     </target>
 
     <target name="composer">
@@ -21,6 +22,8 @@
     <target name="phpunit" depends="composer">
         <exec dir="${basedir}" executable="phpunit" failonerror="true">
             <arg line="--log-junit ${basedir}/build/logs/phpunit-log.xml"/>
+            <arg line="--coverage-clover ${basedir}/build/logs/phpunit-clover.xml"/>
+            <arg line="--coverage-html ${basedir}/build/coverage" />
         </exec>
     </target>
 
