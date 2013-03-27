@@ -22,14 +22,14 @@ Add the following lines to your composer.json:
 
     "require": {
         ...
-        "theodo/evolution-session-integration-bundle": "1.0.*"
+        "theodo-evolution/session-integration-bundle": "1.0.*"
     },
 
 And run composer:
 
 ::
 
-    php composer.phar update theodo/evolution-session-integration-bundle
+    php composer.phar update theodo-evolution/session-integration-bundle
 
 Configuration
 =============
@@ -55,8 +55,8 @@ Configuration
     # app/config/parameters.yml
 
     ...
-    evolution.session.bag_manager.class: Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagManager
-    evolution.session.bag_manager_configuration.class: Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagConfiguration
+    theodo_evolution.session_integration.bag_manager.class: Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagManager
+    theodo_evolution.session_integration.bag_manager_configuration.class: Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\VendorSpecific\Symfony1xBagConfiguration
 
 
 Choose BagManager from existing ones (in Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager)
@@ -65,7 +65,7 @@ or use the `Theodo\Evolution\Bundle\SessionIntegrationBundle\Manager\BagManagerI
 * In config.yml:
   * define your session name (`framework:session:name`) to reuse your legacy cookie name
   * define your session path (`framework:session:save_path`)
-  * define other configuration variables if needed (best method - make a `phpinfo()` inside your legacy application to find the correct values)
+  * define other configuration variables if needed (best method - run `phpinfo()` inside your legacy application to find the correct values)
 
 ::
 

@@ -1,5 +1,5 @@
 {
-    "name": "theodo/evolution-session-integration-bundle",
+    "name": "theodo-evolution/session-integration-bundle",
     "type": "symfony-bundle",
     "description": "The \"Theodo Evolution Session Integration\" bundle",
     "keywords": ["session", "symfony1", "symfony2"],
