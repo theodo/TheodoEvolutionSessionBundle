@@ -52,11 +52,11 @@ Configuration
 
 ::
 
-    # app/config/parameters.yml
-
-    ...
-    theodo_evolution.session.bag_manager.class: Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagManager
-    theodo_evolution.session.bag_manager_configuration.class: Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagConfiguration
+    # app/config/config.yml
+    theodo_evolution_session:
+        bag_manager:
+            class: Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagManager
+            configuration_class: Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagConfiguration
 
 
 Choose BagManager from existing ones (in Theodo\Evolution\Bundle\SessionBundle\Manager)
