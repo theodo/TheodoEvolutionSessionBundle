@@ -15,7 +15,7 @@
         </exec>
         <exec executable="php"> 
             <arg value="composer.phar"/>
-            <arg value="install"/>
+            <arg value="update"/>
         </exec>
     </target> 
 
