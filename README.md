@@ -1,6 +1,15 @@
 Theodo Evolution SessionBundle
 ==============================
 
+What is Theodo Evolution?
+-------------------------
+
+Theodo Evolution is a set of tools, methodologies and software components, making the code of a legacy php application
+more maintainable, easily scalable, secure and fast.
+
+Theodo Evolution's SessionBundle
+--------------------------------
+
 This bundle allows a Symfony 2 application to access the legacy session. We already support session sharing with:
 
  * symfony 1.x
@@ -11,7 +20,6 @@ Prerequisites
 
 This version requires at least Symfony 2.1
 
-
 Documentation
 -------------
 
@@ -19,7 +27,6 @@ The bulk of the documentation is stored in the `Resources/doc/index.md`
 file in this bundle:
 
 [Read the Documentation for master](Resources/doc/index.rst)
-
 
 License
 -------

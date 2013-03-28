@@ -1,18 +1,3 @@
-What is Theodo Evolution?
-=========================
-
-Theodo Evolution is a set of tools, methodologies and software components, making the code of a legacy php application
-more maintainable, easily scalable, secure and fast.
-
-Theodo Evolution's SessionBundle
-================================
-
-This bundle allows a Symfony 2 application to access the legacy session.
-
-Works so far for legacy app made with:
-
-* Symfony 1.x
-
 Installation
 ============
 
@@ -30,6 +15,7 @@ And run composer:
 ::
 
     php composer.phar update theodo-evolution/session-bundle
+
 
 Configuration
 =============
