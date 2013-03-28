@@ -34,7 +34,7 @@ And run composer:
 Configuration
 =============
 
-* Register the bundles in your app/AppKernel.php:
+1. Register the bundles in your app/AppKernel.php:
 
 ::
 
@@ -48,7 +48,7 @@ Configuration
         );
     }
 
-* Choose the BagManager and the corresponding BagConfiguration you want to use:
+2. Choose the BagManager and the corresponding BagConfiguration you want to use:
 
 ::
 
@@ -59,20 +59,20 @@ Configuration
             configuration_class: Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagConfiguration
 
 
-Choose BagManager from existing ones (in Theodo\Evolution\Bundle\SessionBundle\Manager)
-or use the `Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface` to create a new one
+Choose one from those in Theodo\Evolution\Bundle\SessionBundle\Manager or use the
+``Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface`` to create a new one.
 
-* In config.yml:
-  * define your session name (`framework:session:name`) to reuse your legacy cookie name
-  * define your session path (`framework:session:save_path`)
-  * define other configuration variables if needed (best method - run `phpinfo()` inside your legacy application to find the correct values)
+3. In config.yml:
+
+* define your session name (``framework:session:name``) to reuse your legacy cookie name
+* define your session path (``framework:session:save_path``)
+* define other configuration variables if needed (best method - run ``phpinfo()`` inside your legacy application to find the correct values)
 
 ::
 
     # app/config/config.yml
 
     framework:
-        ...
         session:
             name: symfony # the name of your legacy session
             save_path: /var/lib/php5/ # the path vers your legacy session is stored
