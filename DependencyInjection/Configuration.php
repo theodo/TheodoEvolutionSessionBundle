@@ -20,6 +20,21 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('theodo_evolution_session');
 
+        $rootNode
+            ->children()
+                ->arrayNode('bag_manager')
+                    ->isRequired()
+                    ->children()
+                        ->scalarNode('class')
+                            ->isRequired()
+                        ->end()
+                        ->scalarNode('configuration_class')
+                            ->isRequired()
+                        ->end()
+                    ->end()
+                ->end()
+            ->end();
+
         return $treeBuilder;
     }
 }
