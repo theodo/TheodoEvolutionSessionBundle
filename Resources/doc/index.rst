@@ -61,5 +61,5 @@ Choose one from those in Theodo\Evolution\Bundle\SessionBundle\Manager or use th
     framework:
         session:
             name: symfony # the name of your legacy session
-            save_path: /var/lib/php5/ # the path vers your legacy session is stored
+            save_path: /var/lib/php5/ # the path where your legacy session is stored
 
