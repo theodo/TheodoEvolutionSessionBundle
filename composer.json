@@ -4,6 +4,7 @@
     "description": "The \"Theodo Evolution Session Integration\" bundle",
     "keywords": ["session", "symfony1", "symfony2"],
     "homepage": "http://www.theodo.fr",
+    "license": "MIT",
     "authors": [
         {
             "name": "Theodo",
