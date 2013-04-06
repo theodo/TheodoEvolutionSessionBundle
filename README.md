@@ -1,6 +1,8 @@
 Theodo Evolution SessionBundle
 ==============================
 
+[![Build Status](https://travis-ci.org/theodo/TheodoEvolutionSessionBundle.png)](https://travis-ci.org/theodo/TheodoEvolutionSessionBundle)
+
 What is Theodo Evolution?
 -------------------------
 
