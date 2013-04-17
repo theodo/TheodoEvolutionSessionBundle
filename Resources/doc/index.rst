@@ -63,3 +63,43 @@ Choose one from those in Theodo\Evolution\Bundle\SessionBundle\Manager or use th
             name: symfony # the name of your legacy session
             save_path: /var/lib/php5/ # the path where your legacy session is stored
 
+Usage
+=====
+
+Once the configuration is done, you can access the data from your legacy session like the following:
+
+::
+
+    {# somewhere in a twig template #}
+
+    {{ app.request.session.getBag('symfony/user/sfUser/authenticated').get }}
+
+    {{ app.request.session.getBag('symfony/user/sfUser/attributes').get('somehting') }}
+
+Troubleshooting
+===============
+
+Here is a list of causes that may make the sessino sharing not work.
+
+1. Cookie domain name
+
+Check if the cookie domain for your legacy application and for Symfony2 are the same. If you use two different domains it will not work, you should use subdomains.
+To configure the cookie domain name in Symfony2, edit your ```config.yml``` file:
+
+::
+
+    framework:
+        ...
+        session:
+
+        cookie_domain: .legacy.com
+
+Then do the same in your legacy application and check if it works.
+
+2. Session handler
+
+Make sure that the legacy application and Symfony2 use the same session handler. To know which handler php use you can type the following command in your terminal:
+
+::
+
+    expert@theodo:/vagrant/sf2project: php -i | grep session.save_path
