@@ -25,7 +25,7 @@ This version requires at least Symfony 2.1
 Documentation
 -------------
 
-The bulk of the documentation is stored in the `Resources/doc/index.md`
+The bulk of the documentation is stored in the `Resources/doc/index.rst`
 file in this bundle:
 
 [Read the Documentation for master](Resources/doc/index.rst)
