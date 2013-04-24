@@ -6,7 +6,8 @@ use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManager;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
- * EvolutionAttributeBag class.
+ * A BagManager handles registering symfony1.x legacy session values into Symfony2 session.
+ * This is being done mainly by creating and registering SessionBags.
  *
  * @author Benjamin Grandfond <benjaming@theodo.fr>
  * @author Marek Kalnik <marekk@theodo.fr>
