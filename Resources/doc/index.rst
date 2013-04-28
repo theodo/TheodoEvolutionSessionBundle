@@ -72,14 +72,16 @@ Once the configuration is done, you can access the data from your legacy session
 
     {# somewhere in a twig template #}
 
-    {{ app.request.session.getBag('symfony/user/sfUser/authenticated').get }}
+    {# Get the value of a scalar parameter bag #}
+    {% set isAuthenticated = app.request.session.getBag('custom-framework/user/authenticated').get %}
 
-    {{ app.request.session.getBag('symfony/user/sfUser/attributes').get('somehting') }}
+    {# Get a value of a namespaced parameter bag #}
+    {% set value = app.request.session.getBag('custom-framework/attributes').get('somehting') }}
 
 Troubleshooting
 ===============
 
-Here is a list of causes that may make the sessino sharing not work.
+Here is a list of causes that may make the session sharing not work.
 
 1. Cookie domain name
 
