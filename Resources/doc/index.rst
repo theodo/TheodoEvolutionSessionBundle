@@ -66,7 +66,7 @@ Choose one from those in Theodo\Evolution\Bundle\SessionBundle\Manager or use th
 Usage
 =====
 
-Once the configuration is done, you can access the data from your legacy session like the following:
+Once the configuration is done, you can access the data from your legacy session in the following way:
 
 ::
 
@@ -76,7 +76,7 @@ Once the configuration is done, you can access the data from your legacy session
     {% set isAuthenticated = app.request.session.getBag('custom-framework/user/authenticated').get %}
 
     {# Get a value of a namespaced parameter bag #}
-    {% set value = app.request.session.getBag('custom-framework/attributes').get('somehting') }}
+    {% set value = app.request.session.getBag('custom-framework/attributes').get('something') }}
 
 Troubleshooting
 ===============
