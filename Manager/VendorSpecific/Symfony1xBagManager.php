@@ -2,32 +2,18 @@
 
 namespace Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific;
 
-use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManager;
-use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManager;
+use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerConfigurationInterface;
 
 /**
- * The Symfony1xBagManager handles registering symfony1.x legacy session values into Symfony2 session.
- * This is being done mainly by creating and registering SessionBags.
- *
- * @author Benjamin Grandfond <benjaming@theodo.fr>
- * @author Marek Kalnik <marekk@theodo.fr>
+ * @deprecated Renamed to Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManager
  */
 class Symfony1xBagManager extends BagManager
 {
-    protected $locale;
-
-    /**
-     * Create bags for each namespaces (see constants of this class).
-     */
-    public function initialize(SessionInterface $session)
+    public function __construct(BagManagerConfigurationInterface $configuration)
     {
-        parent::initialize($session);
+        parent::__construct($configuration);
 
-        $namespaces = $this->configuration->getNamespaces();
-
-        /* Symfony1 keeps the last request value here
-         * update it as if it was Symfony1 who accessed it
-         */
-        $session->getBag($namespaces['last_request_namespace'])->set(time());
+        trigger_error('The class has been renamed to Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManager', E_USER_DEPRECATED);
     }
 }
