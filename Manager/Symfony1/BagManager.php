@@ -1,8 +1,8 @@
 <?php
 
-namespace Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific;
+namespace Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1;
 
-use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManager;
+use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManager as BaseBagManager;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
@@ -12,7 +12,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  * @author Benjamin Grandfond <benjaming@theodo.fr>
  * @author Marek Kalnik <marekk@theodo.fr>
  */
-class Symfony1xBagManager extends BagManager
+class BagManager extends BaseBagManager
 {
     protected $locale;
 

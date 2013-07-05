@@ -1,6 +1,6 @@
 <?php
 
-namespace Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific;
+namespace Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1;
 
 use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerConfigurationInterface;
 
@@ -10,7 +10,7 @@ use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerConfigurationInterfa
  * @author Benjamin Grandfond <benjaming@theodo.fr>
  * @author Marek Kalnik <marekk@theodo.fr>
  */
-class Symfony1xBagConfiguration implements BagManagerConfigurationInterface
+class BagConfiguration implements BagManagerConfigurationInterface
 {
     private $namespaces = array(
         BagManagerConfigurationInterface::LAST_REQUEST_NAMESPACE => 'symfony/user/sfUser/lastRequest',
