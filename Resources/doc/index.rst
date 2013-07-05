@@ -41,8 +41,8 @@ Configuration
     # app/config/config.yml
     theodo_evolution_session:
         bag_manager:
-            class: Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagManager
-            configuration_class: Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific\Symfony1xBagConfiguration
+            class: Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManager
+            configuration_class: Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagConfiguration
 
 
 Choose one from those in Theodo\Evolution\Bundle\SessionBundle\Manager or use the

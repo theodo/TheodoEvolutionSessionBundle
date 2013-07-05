@@ -2,48 +2,15 @@
 
 namespace Theodo\Evolution\Bundle\SessionBundle\Manager\VendorSpecific;
 
-use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerConfigurationInterface;
+use Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagConfiguration;
 
 /**
- * This class contains configuration for Symfony 1.x namespaces
- *
- * @author Benjamin Grandfond <benjaming@theodo.fr>
- * @author Marek Kalnik <marekk@theodo.fr>
+ * @deprecated Renamed to Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagConfiguration
  */
-class Symfony1xBagConfiguration implements BagManagerConfigurationInterface
+class Symfony1xBagConfiguration extends BagConfiguration
 {
-    private $namespaces = array(
-        BagManagerConfigurationInterface::LAST_REQUEST_NAMESPACE => 'symfony/user/sfUser/lastRequest',
-        BagManagerConfigurationInterface::AUTH_NAMESPACE         => 'symfony/user/sfUser/authenticated',
-        BagManagerConfigurationInterface::CREDENTIAL_NAMESPACE   => 'symfony/user/sfUser/credentials',
-        BagManagerConfigurationInterface::ATTRIBUTE_NAMESPACE    => 'symfony/user/sfUser/attributes',
-        BagManagerConfigurationInterface::CULTURE_NAMESPACE      => 'symfony/user/sfUser/culture',
-    );
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getNamespaces()
+    public function __construct()
     {
-        return $this->namespaces;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getNamespace($key)
-    {
-        return $this->namespaces[$key];
-    }
-
-    public function isArray($namespaceName)
-    {
-        switch ($namespaceName) {
-            case $this->namespaces['attribute_namespace']:
-            case $this->namespaces['credential_namespace']:
-                return true;
-            default:
-                return false;
-        }
+        trigger_error('The class has been renamed to Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagConfiguration', E_USER_DEPRECATED);
     }
 }
