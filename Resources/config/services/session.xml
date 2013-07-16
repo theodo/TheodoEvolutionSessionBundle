@@ -9,6 +9,7 @@
         <parameter key="theodo_evolution.session.storage.mock_file.class">Theodo\Evolution\Bundle\SessionBundle\Storage\MockFileSessionStorage</parameter>
         <parameter key="theodo_evolution.session.session_subscriber.class">Theodo\Evolution\Bundle\SessionBundle\Listener\SessionSubscriber</parameter>
         <parameter key="theodo_evolution.session.symfony1x_bag_manager.class">Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1xBagManager</parameter>
+        <parameter key="theodo_evolution.session.zendframework1_bag_manager.class">Theodo\Evolution\Bundle\SessionBundle\Manager\ZendFramework1BagManager</parameter>
     </parameters>
 
     <services>
@@ -16,7 +17,7 @@
             <argument type="service" id="theodo_evolution.session.bag_manager" />
             <tag name="kernel.event_subscriber" event="kernel.request"/>
         </service>
-        <service id="theodo_evolution.session.bag_manager_configuration" class="%theodo_evolution.session.bag_manager_configuration.class%"/>
+        <service id="theodo_evolution.session.bag_manager_configuration" class="%theodo_evolution.session.bag_manager_configuration.class%" />
         <service id="theodo_evolution.session.bag_manager" class="%theodo_evolution.session.bag_manager.class%">
             <argument type="service" id="theodo_evolution.session.bag_manager_configuration" />
         </service>

@@ -24,10 +24,7 @@ class BagManager extends BaseBagManager
         parent::initialize($session);
 
         $namespaces = $this->configuration->getNamespaces();
-
-        /* Symfony1 keeps the last request value here
-         * update it as if it was Symfony1 who accessed it
-         */
-        $session->getBag($namespaces['last_request_namespace'])->set(time());
+        $zf1Namespaces = $this->configuration->getZf1Namespaces();
+        $zf1MainNamespace = $this->configuration->getZf1MainNamespace();
     }
 }
