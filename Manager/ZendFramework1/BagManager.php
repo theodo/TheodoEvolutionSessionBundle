@@ -14,8 +14,6 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  */
 class BagManager extends BaseBagManager
 {
-    protected $locale;
-
     /**
      * Create bags for each namespaces (see constants of this class).
      */
@@ -24,7 +22,5 @@ class BagManager extends BaseBagManager
         parent::initialize($session);
 
         $namespaces = $this->configuration->getNamespaces();
-        $zf1Namespaces = $this->configuration->getZf1Namespaces();
-        $zf1MainNamespace = $this->configuration->getZf1MainNamespace();
     }
 }
