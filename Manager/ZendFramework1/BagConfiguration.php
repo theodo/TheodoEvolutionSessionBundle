@@ -20,8 +20,17 @@ class BagConfiguration implements BagManagerConfigurationInterface
         BagManagerConfigurationInterface::CULTURE_NAMESPACE      => 'symfony/user/sfUser/culture',
     );
 
+    /**
+     * Array of the session's namespaces in ZendFramework 1
+     * @var array
+     */
     private $zf1Namespaces;
 
+    /**
+     * Both arguments are set in app/config.yml
+     * @param $zf1MainNamespace
+     * @param $zf1Namespaces
+     */
     public function __construct($zf1MainNamespace, $zf1Namespaces) {
         $this->namespaces[BagManagerConfigurationInterface::ATTRIBUTE_NAMESPACE] = $zf1MainNamespace;
         $this->zf1Namespaces = $zf1Namespaces;
@@ -35,7 +44,8 @@ class BagConfiguration implements BagManagerConfigurationInterface
         return $this->namespaces;
     }
 
-    public function getZf1MainNamespace() {
+    public function getZf1MainNamespace()
+    {
         return $this->namespaces[BagManagerConfigurationInterface::ATTRIBUTE_NAMESPACE];
     }
 
@@ -43,7 +53,8 @@ class BagConfiguration implements BagManagerConfigurationInterface
      * Returns the zend session's namespaces
      * @return array
      */
-    public function getZf1Namespaces(){
+    public function getZf1Namespaces()
+    {
         return $this->zf1Namespaces;
     }
 
