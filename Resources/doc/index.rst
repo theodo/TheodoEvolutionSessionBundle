@@ -34,7 +34,11 @@ Configuration
         );
     }
 
-2. Choose the BagManager and the corresponding BagConfiguration you want to use:
+2. Choose the BagManager and the corresponding BagConfiguration you want to use.
+Choose one from those in Theodo\Evolution\Bundle\SessionBundle\Manager or use the
+``Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface`` to create a new one.
+
+If you want to share session between Symfony1 and Symfony2 :
 
 ::
 
@@ -44,9 +48,22 @@ Configuration
             class: Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManager
             configuration_class: Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagConfiguration
 
+If you want to share session between ZendFramework 1.12 and Symfony2, you MUST register the namespaces of your Zend_Session_Namespace objects with the
+zf1_namespaces parameter.
 
-Choose one from those in Theodo\Evolution\Bundle\SessionBundle\Manager or use the
-``Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface`` to create a new one.
+::
+
+    # app/config/config.yml
+    theodo_evolution_session:
+        bag_manager:
+            class: Theodo\Evolution\Bundle\SessionBundle\Manager\ZendFramework1\BagManager
+            configuration_class: Theodo\Evolution\Bundle\SessionBundle\Manager\ZendFramework1\BagConfiguration
+        zf1_namespaces:
+              - 'zf_namespace1'
+              - 'zf_namespace2'
+
+To access Zend session inside a Symfony controller use $this->get('session')->getBag('your_zend_namespace')->get('your_variable_name');
+(You must replace 'your_zend_namespace' and 'your_variable_name' with your own values).
 
 3. In config.yml:
 

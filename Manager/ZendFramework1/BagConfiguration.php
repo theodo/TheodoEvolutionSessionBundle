@@ -12,13 +12,20 @@ use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerConfigurationInterfa
  */
 class BagConfiguration implements BagManagerConfigurationInterface
 {
-    private $namespaces = array(
-        BagManagerConfigurationInterface::ATTRIBUTE_NAMESPACE    => 'mysession',
-        BagManagerConfigurationInterface::LAST_REQUEST_NAMESPACE => 'symfony/user/sfUser/lastRequest',
-        BagManagerConfigurationInterface::AUTH_NAMESPACE         => 'symfony/user/sfUser/authenticated',
-        BagManagerConfigurationInterface::CREDENTIAL_NAMESPACE   => 'symfony/user/sfUser/credentials',
-        BagManagerConfigurationInterface::CULTURE_NAMESPACE      => 'symfony/user/sfUser/culture',
-    );
+
+    /**
+     * Array of the session's namespaces in ZendFramework 1
+     * @var array
+     */
+    private $namespaces;
+
+    /**
+     * Argument is set in app/config.yml
+     * @param $zf1Namespaces
+     */
+    public function __construct($zf1Namespaces) {
+        $this->namespaces = $zf1Namespaces;
+    }
 
     /**
      * {@inheritdoc}
@@ -38,12 +45,6 @@ class BagConfiguration implements BagManagerConfigurationInterface
 
     public function isArray($namespaceName)
     {
-        switch ($namespaceName) {
-            case $this->namespaces['attribute_namespace']:
-            case $this->namespaces['credential_namespace']:
-                return true;
-            default:
-                return false;
-        }
+        return true;
     }
 }

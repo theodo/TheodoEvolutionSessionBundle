@@ -30,6 +30,12 @@ class TheodoEvolutionSessionExtension extends Extension
 
     public function addBagManager($container, $configs)
     {
+        if(array_key_exists('zf1_namespaces',$configs[0]) && $configs[0]['zf1_namespaces'] != null)
+        {
+            $container->getDefinition('theodo_evolution.session.bag_manager_configuration')
+                ->addArgument($configs[0]['zf1_namespaces']);
+        }
+
         $container->setParameter(
             'theodo_evolution.session.bag_manager.class',
             $configs[0]['bag_manager']['class']

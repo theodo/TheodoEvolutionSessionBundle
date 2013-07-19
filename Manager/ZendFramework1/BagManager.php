@@ -14,8 +14,6 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
  */
 class BagManager extends BaseBagManager
 {
-    protected $locale;
-
     /**
      * Create bags for each namespaces (see constants of this class).
      */
@@ -24,10 +22,5 @@ class BagManager extends BaseBagManager
         parent::initialize($session);
 
         $namespaces = $this->configuration->getNamespaces();
-
-        /* Symfony1 keeps the last request value here
-         * update it as if it was Symfony1 who accessed it
-         */
-        $session->getBag($namespaces['last_request_namespace'])->set(time());
     }
 }
