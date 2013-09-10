@@ -6,6 +6,7 @@ use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerConfigurationInterfa
 
 /**
  * Class BagConfiguration
+ *
  * @author Sébastien Tainon <sebastient@theodo.fr>
  */
 class BagConfiguration implements BagManagerConfigurationInterface
@@ -16,10 +17,7 @@ class BagConfiguration implements BagManagerConfigurationInterface
     private $namespaces = array('user');
 
     /**
-     * Gets a list of all session namespaces used by application.
-     * A session namespace is a key in $_SESSION array.
-     *
-     * @return array
+     * {@inheritdoc}
      */
     public function getNamespaces()
     {
@@ -27,10 +25,7 @@ class BagConfiguration implements BagManagerConfigurationInterface
     }
 
     /**
-     * Gets a session namespace from a namespace key.
-     * A session namespace is a key in $_SESSION array.
-     *
-     * @return array
+     * {@inheritdoc}
      */
     public function getNamespace($key)
     {
@@ -38,12 +33,7 @@ class BagConfiguration implements BagManagerConfigurationInterface
     }
 
     /**
-     * Returns if the namespace is an array of namespaces.
-     * Use for nested session values.
-     *
-     * @param string $namespaceName
-     *
-     * @return boolean
+     * {@inheritdoc}
      */
     public function isArray($namespaceName)
     {
@@ -53,5 +43,4 @@ class BagConfiguration implements BagManagerConfigurationInterface
 
         return false;
     }
-
 }
