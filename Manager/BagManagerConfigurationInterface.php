@@ -30,7 +30,7 @@ interface BagManagerConfigurationInterface
 
     /**
      * Returns if the namespace is an array of namespaces.
-     * Use for nested session values.
+     * Useful for nested session values.
      *
      * @param string $namespaceName
      *
