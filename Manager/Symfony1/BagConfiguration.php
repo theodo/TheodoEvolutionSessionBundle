@@ -12,12 +12,18 @@ use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerConfigurationInterfa
  */
 class BagConfiguration implements BagManagerConfigurationInterface
 {
+    const LAST_REQUEST_NAMESPACE = 'last_request_namespace';
+    const AUTH_NAMESPACE = 'auth_namespace';
+    const CREDENTIAL_NAMESPACE = 'credential_namespace';
+    const ATTRIBUTE_NAMESPACE = 'attribute_namespace';
+    const CULTURE_NAMESPACE = 'culture_namespace';
+
     private $namespaces = array(
-        BagManagerConfigurationInterface::LAST_REQUEST_NAMESPACE => 'symfony/user/sfUser/lastRequest',
-        BagManagerConfigurationInterface::AUTH_NAMESPACE         => 'symfony/user/sfUser/authenticated',
-        BagManagerConfigurationInterface::CREDENTIAL_NAMESPACE   => 'symfony/user/sfUser/credentials',
-        BagManagerConfigurationInterface::ATTRIBUTE_NAMESPACE    => 'symfony/user/sfUser/attributes',
-        BagManagerConfigurationInterface::CULTURE_NAMESPACE      => 'symfony/user/sfUser/culture',
+        self::LAST_REQUEST_NAMESPACE => 'symfony/user/sfUser/lastRequest',
+        self::AUTH_NAMESPACE         => 'symfony/user/sfUser/authenticated',
+        self::CREDENTIAL_NAMESPACE   => 'symfony/user/sfUser/credentials',
+        self::ATTRIBUTE_NAMESPACE    => 'symfony/user/sfUser/attributes',
+        self::CULTURE_NAMESPACE      => 'symfony/user/sfUser/culture',
     );
 
     /**
