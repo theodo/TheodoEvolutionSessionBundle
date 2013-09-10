@@ -22,15 +22,12 @@ class Configuration implements ConfigurationInterface
 
         $rootNode
             ->children()
+                ->scalarNode('bag_manager_service')->end()
+                ->scalarNode('bag_configuration_service')->end()
                 ->arrayNode('bag_manager')
-                    ->isRequired()
                     ->children()
-                        ->scalarNode('class')
-                            ->isRequired()
-                        ->end()
-                        ->scalarNode('configuration_class')
-                            ->isRequired()
-                        ->end()
+                        ->scalarNode('class')->end()
+                        ->scalarNode('configuration_class')->end()
                     ->end()
                 ->end()
             ->end();
