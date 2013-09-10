@@ -10,6 +10,9 @@ use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerConfigurationInterfa
  */
 class BagConfiguration implements BagManagerConfigurationInterface
 {
+    /**
+     * @var array
+     */
     private $namespaces = array('user');
 
     /**
