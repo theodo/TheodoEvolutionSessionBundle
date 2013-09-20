@@ -15,6 +15,7 @@ Theodo Evolution's SessionBundle
 This bundle allows a Symfony 2 application to access the legacy session. We already support session sharing with:
 
  * symfony 1.x
+ * CodeIgniter
 
 
 Prerequisites
