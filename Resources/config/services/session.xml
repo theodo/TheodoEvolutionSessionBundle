@@ -8,7 +8,9 @@
         <parameter key="theodo_evolution.session.storage.native.class">Theodo\Evolution\Bundle\SessionBundle\Storage\NativeSessionStorage</parameter>
         <parameter key="theodo_evolution.session.storage.mock_file.class">Theodo\Evolution\Bundle\SessionBundle\Storage\MockFileSessionStorage</parameter>
         <parameter key="theodo_evolution.session.session_subscriber.class">Theodo\Evolution\Bundle\SessionBundle\Listener\SessionSubscriber</parameter>
-        <parameter key="theodo_evolution.session.symfony1x_bag_manager.class">Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1xBagManager</parameter>
+        <parameter key="theodo_evolution.session.symfony1.bag_manager.class">Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManager</parameter>
+        <parameter key="theodo_evolution.session.symfony1.bag_manager_configuration.class">Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManagerConfiguration</parameter>
+        <parameter key="theodo_evolution.session.code_igniter.bag_manager_configuration.class">Theodo\Evolution\Bundle\SessionBundle\Manager\CodeIgniter\BagManagerConfiguration</parameter>
     </parameters>
 
     <services>
@@ -20,6 +22,13 @@
         <service id="theodo_evolution.session.bag_manager" class="%theodo_evolution.session.bag_manager.class%">
             <argument type="service" id="theodo_evolution.session.bag_manager_configuration" />
         </service>
+
+        <service id="theodo_evolution.session.symfony1.bag_manager_configuration" class="%theodo_evolution.session.symfony1.bag_manager_configuration.class%"/>
+        <service id="theodo_evolution.session.symfony1.bag_manager" class="%theodo_evolution.session.symfony1.bag_manager.class%">
+            <argument type="service" id="theodo_evolution.session.symfony1.bag_manager_configuration" />
+        </service>
+
+        <service id="theodo_evolution.session.code_igniter.bag_manager_configuration" class="%theodo_evolution.session.code_igniter.bag_manager_configuration.class%" />
     </services>
 
 </container>
