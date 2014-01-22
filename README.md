@@ -1,7 +1,7 @@
 Theodo Evolution SessionBundle
 ==============================
 
-[![Build Status](https://travis-ci.org/theodo/TheodoEvolutionSessionBundle.png)](https://travis-ci.org/theodo/TheodoEvolutionSessionBundle)
+[![Build Status](https://travis-ci.org/theodo/TheodoEvolutionSessionBundle.png)](https://travis-ci.org/theodo/TheodoEvolutionSessionBundle) [![Latest Stable Version](https://poser.pugx.org/theodo-evolution/session-bundle/v/stable.png)](https://packagist.org/packages/theodo-evolution/session-bundle) [![Total Downloads](https://poser.pugx.org/theodo-evolution/session-bundle/downloads.png)](https://packagist.org/packages/theodo-evolution/session-bundle) [![Latest Unstable Version](https://poser.pugx.org/theodo-evolution/session-bundle/v/unstable.png)](https://packagist.org/packages/theodo-evolution/session-bundle) [![License](https://poser.pugx.org/theodo-evolution/session-bundle/license.png)](https://packagist.org/packages/theodo-evolution/session-bundle)
 
 What is Theodo Evolution?
 -------------------------
