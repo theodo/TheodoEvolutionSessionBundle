@@ -6,12 +6,6 @@ namespace Theodo\Evolution\Bundle\SessionBundle\Manager;
  */
 interface BagManagerConfigurationInterface
 {
-    const LAST_REQUEST_NAMESPACE = 'last_request_namespace';
-    const AUTH_NAMESPACE = 'auth_namespace';
-    const CREDENTIAL_NAMESPACE = 'credential_namespace';
-    const ATTRIBUTE_NAMESPACE = 'attribute_namespace';
-    const CULTURE_NAMESPACE = 'culture_namespace';
-
     /**
      * Gets a list of all session namespaces used by application.
      * A session namespace is a key in $_SESSION array.
