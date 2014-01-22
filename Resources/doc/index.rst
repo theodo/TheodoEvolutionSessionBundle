@@ -40,13 +40,36 @@ Configuration
 
     # app/config/config.yml
     theodo_evolution_session:
-        bag_manager:
-            class: Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManager
-            configuration_class: Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagConfiguration
+        bag_manager_service:       theodo_evolution.session.symfony1.bag_manager
+        bag_configuration_service: theodo_evolution.session.symfony1.bag_manager_configuration
 
 
-Choose one from those in Theodo\Evolution\Bundle\SessionBundle\Manager or use the
-``Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface`` to create a new one.
+You can pick the manager and the configuration you need among the following list:
+
+ * Symfony1:
+   * manager service id: theodo_evolution.session.symfony1.bag_manager
+   * configuration service id: theodo_evolution.session.symfony1.bag_manager_configuration
+ * CodeIgniter:
+   * manager service id: theodo_evolution.session.bag_manager
+   * configuration service id: theodo_evolution.session.code_igniter.bag_manager_configuration
+
+You can also create your own bag manager. To do so you only need to create a new service that implements the
+``Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface`` interface.
+
+::
+
+    use Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface;
+
+    class MyBagManager implements BagManagerInterface
+    {
+        /**
+         * {@inheritdoc}
+         */
+        public function initialize(SessionInterface $session)
+        {
+            // do something
+        }
+    }
 
 3. In config.yml:
 
