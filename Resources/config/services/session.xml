@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <parameters>
         <parameter key="theodo_evolution.session.storage.native.class">Theodo\Evolution\Bundle\SessionBundle\Storage\NativeSessionStorage</parameter>
         <parameter key="theodo_evolution.session.storage.mock_file.class">Theodo\Evolution\Bundle\SessionBundle\Storage\MockFileSessionStorage</parameter>
         <parameter key="theodo_evolution.session.session_subscriber.class">Theodo\Evolution\Bundle\SessionBundle\Listener\SessionSubscriber</parameter>
+        <parameter key="theodo_evolution.session.bag_manager.class">Theodo\Evolution\Bundle\SessionBundle\Manager\BagManager</parameter>
         <parameter key="theodo_evolution.session.symfony1.bag_manager.class">Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManager</parameter>
         <parameter key="theodo_evolution.session.symfony1.bag_manager_configuration.class">Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManagerConfiguration</parameter>
         <parameter key="theodo_evolution.session.code_igniter.bag_manager_configuration.class">Theodo\Evolution\Bundle\SessionBundle\Manager\CodeIgniter\BagManagerConfiguration</parameter>
@@ -18,8 +19,9 @@
             <argument type="service" id="theodo_evolution.session.bag_manager" />
             <tag name="kernel.event_subscriber" event="kernel.request"/>
         </service>
+
         <service id="theodo_evolution.session.bag_manager_configuration" class="%theodo_evolution.session.bag_manager_configuration.class%"/>
-        <service id="theodo_evolution.session.bag_manager" class="%theodo_evolution.session.bag_manager.class%">
+        <service id="theodo_evolution.session.bag_manager_default" class="%theodo_evolution.session.bag_manager.class%"  public="false">
             <argument type="service" id="theodo_evolution.session.bag_manager_configuration" />
         </service>
 
