@@ -23,12 +23,12 @@
             <argument type="service" id="theodo_evolution.session.bag_manager_configuration" />
         </service>
 
-        <service id="theodo_evolution.session.symfony1.bag_manager_configuration" class="%theodo_evolution.session.symfony1.bag_manager_configuration.class%"/>
-        <service id="theodo_evolution.session.symfony1.bag_manager" class="%theodo_evolution.session.symfony1.bag_manager.class%">
+        <service id="theodo_evolution.session.symfony1.bag_manager_configuration" class="%theodo_evolution.session.symfony1.bag_manager_configuration.class%" public="false"/>
+        <service id="theodo_evolution.session.symfony1.bag_manager" class="%theodo_evolution.session.symfony1.bag_manager.class%" public="false">
             <argument type="service" id="theodo_evolution.session.symfony1.bag_manager_configuration" />
         </service>
 
-        <service id="theodo_evolution.session.code_igniter.bag_manager_configuration" class="%theodo_evolution.session.code_igniter.bag_manager_configuration.class%" />
+        <service id="theodo_evolution.session.code_igniter.bag_manager_configuration" class="%theodo_evolution.session.code_igniter.bag_manager_configuration.class%" public="false" />
     </services>
 
 </container>
