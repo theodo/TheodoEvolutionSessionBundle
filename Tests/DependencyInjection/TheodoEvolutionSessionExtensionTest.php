@@ -16,7 +16,7 @@ class TheodoEvolutionSessionExtensionTest extends \PHPUnit_Framework_TestCase
         $parser = new Parser();
         $config = $parser->parse($config);
 
-        $builder = new ContainerBuilder(); 
+        $builder = new ContainerBuilder();
         $extension = new TheodoEvolutionSessionExtension();
         $extension->load(array($config), $builder);
     }
@@ -28,6 +28,41 @@ class TheodoEvolutionSessionExtensionTest extends \PHPUnit_Framework_TestCase
 bag_manager:
     class: TestClass
     configuration_class: TestConfigurationClass
+YML
+            ),
+            array(<<<YML
+bag_manager_service: foo
+bag_configuration_service: bar
+YML
+            )
+        );
+    }
+
+    /**
+     * @dataProvider getInvalidConfiguration
+     * @expectedException \InvalidArgumentException
+     */
+    public function testInvalidConfiguration($config)
+    {
+        $parser = new Parser();
+        $config = $parser->parse($config);
+
+        $builder = new ContainerBuilder();
+        $extension = new TheodoEvolutionSessionExtension();
+        $extension->load(array($config), $builder);
+    }
+
+    public function getInvalidConfiguration()
+    {
+        return array(
+            array(""),
+            array(<<<YML
+bag_manager_service:
+bag_configuration_service:
+bag_manager:
+    class:
+    configuration_class:
+
 YML
             )
         );
