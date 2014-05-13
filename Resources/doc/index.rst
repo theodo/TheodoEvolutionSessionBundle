@@ -7,7 +7,7 @@ Add the following lines to your composer.json:
 
     "require": {
         ...
-        "theodo-evolution/session-bundle": "1.0.*"
+        "theodo-evolution/session-bundle": "dev-master"
     },
 
 And run composer:
