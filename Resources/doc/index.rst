@@ -40,9 +40,9 @@ Configuration
 
     # app/config/config.yml
     theodo_evolution_session:
-        bag_manager_service:       theodo_evolution.session.symfony1.bag_manager
-        bag_configuration_service: theodo_evolution.session.symfony1.bag_manager_configuration
-
+        bag_manager:
+            class:                  Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagManager
+            configuration_class:    Theodo\Evolution\Bundle\SessionBundle\Manager\Symfony1\BagConfiguration
 
 You can pick the manager and the configuration you need among the following list:
 
