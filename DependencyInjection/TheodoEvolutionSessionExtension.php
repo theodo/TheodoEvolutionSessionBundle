@@ -36,8 +36,8 @@ class TheodoEvolutionSessionExtension extends Extension
      */
     private function addBagManager(ContainerBuilder $container, $config)
     {
+        $managerAlias = 'theodo_evolution.session.bag_manager';
         if (isset($config['bag_manager_service']) && isset($config['bag_configuration_service'])) {
-            $managerAlias = 'theodo_evolution.session.bag_manager';
             $managerId = $config['bag_manager_service'];
             if ($managerAlias !== $managerId) {
                 $container->setAlias($managerAlias, $managerId);
@@ -57,7 +57,7 @@ class TheodoEvolutionSessionExtension extends Extension
                 'theodo_evolution.session.bag_manager_configuration.class',
                 $config['bag_manager']['configuration_class']
             );
+            $container->setAlias($managerAlias, 'theodo_evolution.session.bag_manager_default');
         }
-
     }
 }
