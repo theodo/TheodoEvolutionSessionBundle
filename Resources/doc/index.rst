@@ -47,11 +47,11 @@ Configuration
 You can pick the manager and the configuration you need among the following list:
 
  * Symfony1:
-   * manager service id: theodo_evolution.session.symfony1.bag_manager
-   * configuration service id: theodo_evolution.session.symfony1.bag_manager_configuration
+     * manager service id: theodo_evolution.session.symfony1.bag_manager
+     * configuration service id: theodo_evolution.session.symfony1.bag_manager_configuration
  * CodeIgniter:
-   * manager service id: theodo_evolution.session.bag_manager
-   * configuration service id: theodo_evolution.session.code_igniter.bag_manager_configuration
+     * manager service id: theodo_evolution.session.bag_manager_default
+     * configuration service id: theodo_evolution.session.code_igniter.bag_manager_configuration
 
 You can also create your own bag manager. To do so you only need to create a new service that implements the
 ``Theodo\Evolution\Bundle\SessionBundle\Manager\BagManagerInterface`` interface.
